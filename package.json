@@ -1,0 +1,64 @@
+{
+	"name": "user-service",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "ENV=development nodemon --exec babel-node -- bin/index",
+		"build": "rm -r dist && ENV=production babel . -d dist --presets env --ignore test.js,spec.js,node_modules",
+		"serve": "node dist/app.js",
+		"test": "ENV=ptest mocha --require babel-register",
+		"sequelize": "./node_modules/.bin/sequelize"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^8.2.2",
+		"babel-plugin-add-module-exports": "^0.2.1",
+		"babel-plugin-syntax-async-functions": "^6.13.0",
+		"babel-plugin-transform-regenerator": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-register": "^6.26.0",
+		"chai": "^4.1.2",
+		"chai-http": "^4.0.0",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-plugin-import": "^2.11.0",
+		"mocha": "^5.0.4",
+		"nodemon": "^1.17.2",
+		"request": "^2.85.0",
+		"sequelize-cli": "^4.0.0"
+	},
+	"dependencies": {
+		"bluebird": "^3.5.1",
+		"body-parser": "^1.18.2",
+		"dotenv": "^5.0.1",
+		"express": "^4.16.3",
+		"morgan": "^1.9.0",
+		"mysql": "^2.15.0",
+		"mysql2": "^1.5.3",
+		"pg": "^7.4.1",
+		"pg-hstore": "^2.3.2",
+		"sequelize": "^4.37.6"
+	},
+	"eslintConfig": {
+		"parser": "babel-eslint",
+		"extends": [
+			"airbnb/base",
+			"plugin:import/errors"
+		],
+		"rules": {
+			"no-use-before-define": 0,
+			"arrow-body-style": 0,
+			"dot-notation": 0,
+			"no-console": 0,
+			"new-cap": 0
+		},
+		"env": {
+			"mocha": true
+		}
+	}
+}

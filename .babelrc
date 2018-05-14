@@ -1,0 +1,14 @@
+{
+  "passPerPreset": true,
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "8"
+        }
+      }
+    ]
+  ],
+  "plugins": ["syntax-async-functions", "transform-regenerator"]
+}
