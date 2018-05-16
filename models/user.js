@@ -3,30 +3,30 @@ export default (sequelize, Sequelize) => {
     id: {
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER,
+      type: Sequelize.INTEGER
     },
     firstname: {
       type: Sequelize.STRING,
-      notEmpty: true,
+      notEmpty: true
     },
     lastname: {
       type: Sequelize.STRING,
-      notEmpty: true,
+      notEmpty: true
     },
     username: {
       type: Sequelize.TEXT,
-      unique: true,
+      unique: true
     },
     about: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING
     },
     password: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: false
     },
     status: {
       type: Sequelize.ENUM('active', 'inactive'),
-      defaultValue: 'active',
+      defaultValue: 'active'
     }
   });
 
