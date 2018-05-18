@@ -17,7 +17,8 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     status: {
-      type: DataTypes.enum('active', 'inactive'),
+      type: DataTypes.ENUM,
+      values: ['active', 'inactive'],
       defaultValue: 'active'
     }
   }, {});
