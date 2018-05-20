@@ -1,17 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import UserController from './controllers/User';
+import userRouter from './routes/UserRoutes';
 
 // init app
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/api/v1/', userRouter);
 app.get('/', async (req, res) => {
-  const user = new UserController(req, res);
-  console.log('params', req.query, 'users', user.getAll());
-  const result = await user.getAll();
-  console.log('params', req.query);
-  res.send({ message: `HELLO GUYS I AM HERE ${result}` });
+  res.send({ message: 'HELLO GUYS I AM HERE' });
 });
 export default app;

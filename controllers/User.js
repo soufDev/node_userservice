@@ -1,13 +1,22 @@
 import models from '../db/models';
 
-export default class UserControler {
-  constructor(request, response) {
-    this.request = request;
-    this.response = response;
-  }
-
-  static async getAll() {
+const getAll = async (request, response) => {
+  try {
     const result = await models.User.findAll();
-    return result;
+    response.send(result);
+  } catch (e) {
+    console.error('Error User Get All', e.message);
+  }
+};
+
+const add = async (request, response) => {
+  try {
+    const { user } = request.body;
+    const result = await models.User.create(user);
+    response.send(result);
+  } catch (e) {
+    console.error('Error Add User', e.message);
   }
 }
+
+export default { getAll, add };
