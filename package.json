@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "ENV=development nodemon --exec babel-node -- bin/index",
-		"build": "rm -r dist && ENV=production babel . -d dist --presets env --ignore test.js,spec.js,node_modules",
+		"build": "rm -r dist && NODE_ENV=production babel . -d dist --presets env --ignore test.js,spec.js,node_modules",
 		"serve": "node dist/app.js",
 		"test": "mocha --require babel-register",
 		"sequelize": "node_modules/.bin/sequelize"
