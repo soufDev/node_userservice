@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "ENV=development nodemon --exec babel-node -- bin/index",
-		"build": "rm -r dist && ENV=production babel . -d dist --presets env --ignore test.js,spec.js,node_modules",
+		"build": "rm -r dist && NODE_ENV=production babel . -d dist --presets env --ignore test.js,spec.js,node_modules",
 		"serve": "node dist/app.js",
 		"test": "mocha --require babel-register",
 		"sequelize": "node_modules/.bin/sequelize"
@@ -18,6 +18,8 @@
 		"babel-eslint": "^8.2.2",
 		"babel-plugin-add-module-exports": "^0.2.1",
 		"babel-plugin-syntax-async-functions": "^6.13.0",
+		"babel-plugin-transform-es2015-spread": "^6.22.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-plugin-transform-regenerator": "^6.26.0",
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-env": "^1.6.1",
@@ -35,6 +37,7 @@
 		"sequelize-cli": "^4.0.0"
 	},
 	"dependencies": {
+		"bcrypt": "^2.0.1",
 		"bluebird": "^3.5.1",
 		"body-parser": "^1.18.2",
 		"dotenv": "^5.0.1",
