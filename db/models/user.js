@@ -21,7 +21,11 @@ export default (sequelize, DataTypes) => {
       values: ['active', 'inactive'],
       defaultValue: 'active'
     }
-  }, {});
+  }, {
+    defaultScope: {
+      attributes: { exclude: ['password'] },
+    }
+  });
   User.associate = (models) => {
     // associations can be defined here
   };

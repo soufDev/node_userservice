@@ -3,9 +3,9 @@ import chaiHttp from 'chai-http';
 import Promise from 'bluebird';
 import env from 'dotenv';
 import app from '../app';
+import faker from "faker";
 
 before(() => {
-  console.log('test ', env);
 });
 
 chai.use(chaiHttp);
@@ -14,6 +14,8 @@ const {
 } = chai;
 const request = chai.request(app);
 Promise.promisifyAll(request);
+
+const URI_PREFIX = '/api/v1';
 describe('API Home Page', () => {
   it('Main Page Content', async () => {
     try {

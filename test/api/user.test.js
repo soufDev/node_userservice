@@ -4,8 +4,13 @@ import Promise from 'bluebird';
 import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
+import models from '../../db/models';
 
-before(() => {
+before(async () => {
+  await models.User.destroy({
+    where: {},
+    truncate: true
+  });
   process.env.SERVER_PORT = 3000;
 });
 
@@ -31,14 +36,20 @@ describe('User API', () => {
       password: faker.internet.password(),
       email: faker.internet.email()
     }
-    const result = await request
+    const result = await chai.request(app)
       .post(`${URI_PREFIX}/users`)
       .send({ user });
-    expect(result.status).to.be.equal(200);
+    expect(result.body).to.be.an('object');
+    expect(result.body).to.not.have.key('password');
+    expect(result.status).to.be.equal(201);
   })
 });
 
-after(() => {
+after(async () => {
+  await models.User.destroy({
+    where: {},
+    truncate: true
+  });
   request.close();
   process.exit();
 });

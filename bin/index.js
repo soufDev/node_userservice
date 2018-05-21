@@ -12,3 +12,5 @@ const server = http.createServer(app);
 server.listen(serverPort, () => {
   console.info('Hey its Working on', serverPort);
 });
+
+export default server;
