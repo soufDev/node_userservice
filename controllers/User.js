@@ -24,13 +24,13 @@ const add = async (request, response) => {
         const result = await models.User
           .create({ ...user, password: hash })
           .catch(Sequelize.ValidationError, (validationError) => {
-            const err = validationError.errors[0];
-            response.status(404).json({
+            const errors = validationError.errors.map(err => ({
               attribute: err.path,
               type: err.type,
               validatorKey: err.validatorKey,
               message: err.message
-            });
+            }));
+            response.status(404).json({ validation_errors: errors });
           });
         response.status(201).json(result).end();
       }
