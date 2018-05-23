@@ -74,7 +74,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validatorKey).to.be.equal('is_null');
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
       expect(result.status).to.be.equal(404);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -94,7 +94,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validatorKey).to.be.equal('notEmpty');
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
       expect(result.status).to.be.equal(404);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -113,9 +113,9 @@ describe('User API', () => {
     try {
       const result = await chai.request(app)
         .post(`${URI_PREFIX}/users`)
-        .send({user});
+        .send({ user });
       console.log(result.body);
-      expect(result.body.validatorKey).to.be.equal('len');
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('len');
       expect(result.status).to.be.equal(404);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -134,9 +134,91 @@ describe('User API', () => {
     try {
       const result = await chai.request(app)
         .post(`${URI_PREFIX}/users`)
+        .send({user});
+      console.log(result.body);
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+      expect(result.status).to.be.equal(404);
+    } catch (e) {
+      expect(e.message).to.be.equal('error');
+    }
+  });
+  it('add user with null email', async () => {
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: null
+    }
+    try {
+      const result = await chai.request(app)
+        .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validatorKey).to.be.equal('not_unique');
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+      expect(result.status).to.be.equal(404);
+    } catch (e) {
+      expect(e.message).to.be.equal('error');
+    }
+  });
+  it('add user with empty email', async () => {
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: ''
+    }
+    try {
+      const result = await chai.request(app)
+        .post(`${URI_PREFIX}/users`)
+        .send({ user });
+      console.log(result.body);
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+      expect(result.status).to.be.equal(404);
+    } catch (e) {
+      expect(e.message).to.be.equal('error');
+    }
+  });
+
+  it('add user with invalid email', async () => {
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: 'sou@sdsd'
+    }
+    try {
+      const result = await chai.request(app)
+        .post(`${URI_PREFIX}/users`)
+        .send({ user });
+      console.log(result.body);
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('isEmail');
+      expect(result.status).to.be.equal(404);
+    } catch (e) {
+      expect(e.message).to.be.equal('error');
+    }
+  });
+  it('add user with existing email', async () => {
+    const existingUser = await models.User.findById(1);
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: existingUser.email
+    }
+    try {
+      const result = await chai.request(app)
+        .post(`${URI_PREFIX}/users`)
+        .send({ user });
+      console.log(result.body);
+      expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
       expect(result.status).to.be.equal(404);
     } catch (e) {
       expect(e.message).to.be.equal('error');
