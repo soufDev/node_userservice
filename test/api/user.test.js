@@ -259,8 +259,59 @@ describe('update user', () => {
     console.log(result.body);
     expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
     expect(result.status).to.be.equal(400);
-  })
-  it('update use with existing email', async () => {
+  });
+  it('update user with short username', async () => {
+    const id = await addUser();
+    const user = {
+      username: 'az',
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: faker.internet.email()
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('len');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with null username', async () => {
+    const id = await addUser();
+    const user = {
+      username: null,
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: faker.internet.email()
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with empty username', async () => {
+    const id = await addUser();
+    const user = {
+      username: '',
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: faker.internet.email()
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with existing email', async () => {
     const id = await addUser();
     const existingUser = await models.User.findById(1);
     const user = {
@@ -276,6 +327,57 @@ describe('update user', () => {
       .send({ user });
     console.log(result.body);
     expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with invalid email', async () => {
+    const id = await addUser();
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: 'azeazeazeaze'
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('isEmail');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with null email', async () => {
+    const id = await addUser();
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: null
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+    expect(result.status).to.be.equal(400);
+  });
+  it('update user with empty email', async () => {
+    const id = await addUser();
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: ''
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
     expect(result.status).to.be.equal(400);
   });
 });
