@@ -15,7 +15,7 @@ export default (sequelize, DataTypes) => {
           msg: 'cannot be empty'
         },
         len: {
-          args: 6,
+          args: 3,
           msg: 'must be at least 6 characters in length'
         }
       }

@@ -19,7 +19,7 @@ const add = async (request, response) => {
     const saltRounds = 10;
     bcrypt.hash(password, saltRounds, async (error, hash) => {
       if (error) {
-        response.status(404).json(error).end();
+        response.status(400).json(error).end();
       } else {
         const result = await models.User
           .create({ ...user, password: hash })
@@ -30,7 +30,7 @@ const add = async (request, response) => {
               validatorKey: err.validatorKey,
               message: err.message
             }));
-            response.status(404).json({ validation_errors: errors });
+            response.status(400).json({ validation_errors: errors });
           });
         response.status(201).json(result).end();
       }
@@ -70,12 +70,12 @@ const update = async (request, response) => {
           validatorKey: err.validatorKey,
           message: err.message
         }));
-        response.status(404).json({ validation_errors: errors });
+        response.status(400).json({ validation_errors: errors });
       });
     if (updateResult[0] === 1) {
       response.status(204).json({ message: 'User updated with success' });
     } else {
-      response.status(404).json({ message: 'an error was occurred' });
+      response.status(400).json({ message: 'an error was occurred' });
     }
   } catch (e) {
     console.error('Error update User', e.message);
