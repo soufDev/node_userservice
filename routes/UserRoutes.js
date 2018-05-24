@@ -11,4 +11,8 @@ router.post('/users', (request, response) => {
   UserController.add(request, response);
 });
 
+router.put('/user/:id', (request, response) => {
+  UserController.update(request, response);
+});
+
 export default router;

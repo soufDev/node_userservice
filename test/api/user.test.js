@@ -225,7 +225,40 @@ describe('User API', () => {
     }
   });
 });
-
+const addUser = async () => {
+  const userToAdd = {
+    firstname: faker.name.firstName(),
+    lastname: faker.name.lastName(),
+    username: faker.internet.userName(),
+    about: faker.lorem.words(),
+    password: faker.internet.password(),
+    email: faker.internet.email()
+  }
+  const result = await chai.request(app)
+    .post(`${URI_PREFIX}/users`)
+    .send({ user: userToAdd });
+  return result.body.id;
+}
+describe('update user', () => {
+  it('update user with existing username', async () => {
+    const id = await addUser();
+    const existingUser = await models.User.findById(1);
+    const user = {
+      username: existingUser.username,
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      about: faker.lorem.words(),
+      password: faker.internet.password(),
+      email: faker.internet.email()
+    }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+    expect(result.status).to.be.equal(404);
+  })
+});
 after(async () => {
   await models.User.destroy({
     where: {},
