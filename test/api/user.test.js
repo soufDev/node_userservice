@@ -41,7 +41,7 @@ describe('User API', () => {
   it('GET all', async () => {
     console.log(env);
     const result = await request.get(`${URI_PREFIX}/users`);
-    expect(result.body).to.be.an('array');
+    expect(result.body.users).to.be.an('array');
   });
   it('add user', async () => {
     const user = {
