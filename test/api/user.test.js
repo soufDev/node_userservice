@@ -382,6 +382,66 @@ describe('update user', () => {
   });
 });
 
+describe('find User', () => {
+  it('not found user', async () => {
+    const result = await chai.request(app)
+      .get(`${URI_PREFIX}/user/${123456789}`);
+    console.log(result.body);
+    expect(result.body.message).to.be.equal('User not found');
+    expect(result.status).to.be.equal(404);
+  });
+  it('find user with username', async () => {
+    const { username } = await models.User.findById(await addUser());
+    const result = await chai.request(app)
+      .get(`${URI_PREFIX}/user/${username}`);
+    console.log(result.body);
+    expect(result.body.user.username).to.be.equal(username);
+    expect(result.status).to.be.equal(200);
+  })
+  it('find user with id', async () => {
+    const { id, username } = await models.User.findById(await addUser());
+    const result = await chai.request(app)
+      .get(`${URI_PREFIX}/user/${id}`);
+    console.log(result.body);
+    expect(result.body.user.username).to.be.equal(username);
+    expect(result.status).to.be.equal(200);
+  })
+});
+
+describe('delete User', () => {
+  it('not found user', async () => {
+    const result = await chai.request(app)
+      .delete(`${URI_PREFIX}/user/${1234567}`);
+    console.log(result.body);
+    expect(result.body.message).to.be.equal('User not found');
+    expect(result.status).to.be.equal(404);
+  });
+  it('delete user with username', async () => {
+    const { username } = await models.User.findById(await addUser());
+    const users = await models.User.findAll();
+    const size = users.length;
+    const result = await chai.request(app)
+      .delete(`${URI_PREFIX}/user/${username}`);
+    const usersAfterDelete = await models.User.findAll();
+    const sizeAfterDelete = usersAfterDelete.length;
+    console.log(result.body);
+    expect(size - 1).to.be.equal(sizeAfterDelete);
+    expect(result.status).to.be.equal(200);
+  });
+  it('delete user with id', async () => {
+    const id = await addUser();
+    const users = await models.User.findAll();
+    const size = users.length;
+    const result = await chai.request(app)
+      .delete(`${URI_PREFIX}/user/${id}`);
+    const usersAfterDelete = await models.User.findAll();
+    const sizeAfterDelete = usersAfterDelete.length;
+    console.log(result.body);
+    expect(size - 1).to.be.equal(sizeAfterDelete);
+    expect(result.status).to.be.equal(200);
+  })
+});
+
 after(async () => {
   await models.User.destroy({
     where: {},

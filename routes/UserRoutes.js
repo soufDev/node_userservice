@@ -15,4 +15,12 @@ router.put('/user/:id', (request, response) => {
   UserController.update(request, response);
 });
 
+router.get('/user/:param', (request, response) => {
+  UserController.getOne(request, response);
+});
+
+router.delete('/user/:param', (request, response) => {
+  UserController.deleteOne(request, response);
+});
+
 export default router;

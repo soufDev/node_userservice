@@ -2,6 +2,8 @@ import bcrypt from 'bcrypt';
 import Sequelize from 'sequelize';
 import models from '../db/models';
 
+const { Op } = Sequelize;
+
 const getAll = async (request, response) => {
   try {
     const result = await models.User.findAll();
@@ -53,14 +55,7 @@ const update = async (request, response) => {
         about: user.about,
         status: user.status
       }, {
-        fields: [
-          'email',
-          'username',
-          'firstname',
-          'lastname',
-          'about',
-          'status'
-        ],
+        fields: ['email', 'username', 'firstname', 'lastname', 'about', 'status'],
         returning: true,
         where: whereCondition
       }).catch(Sequelize.ValidationError, (validationError) => {
@@ -80,7 +75,55 @@ const update = async (request, response) => {
   } catch (e) {
     console.error('Error update User', e.message);
   }
-
 }
 
-export default { getAll, add, update };
+const getOne = async (request, response) => {
+  try {
+    const { param } = request.params;
+    const user = await models.User.findOne({
+      where: {
+        [Op.or]: [
+          { id: param },
+          { username: param },
+        ]
+      }
+    });
+    if (user === null) {
+      response.status(404).json({ message: 'User not found' });
+    } else {
+      response.status(200).json({ user });
+    }
+  } catch (e) {
+    console.error('Error in get User', e.message)
+  }
+}
+
+const deleteOne = async (request, response) => {
+  const { param } = request.params;
+  const idClause = isNaN(parseInt(param, 10)) ? '-1' : param;
+  try {
+    const user = await models.User.destroy({
+      where: {
+        [Op.or]: [
+          { id: idClause },
+          { username: param }
+        ]
+      }
+    });
+    if (user === 0) {
+      response.status(404).json({ message: 'User not found' });
+    } else {
+      response.status(200).json({ user });
+    }
+  } catch (e) {
+    console.error('Error in delete User', e.message);
+  }
+}
+
+export default {
+  getAll,
+  add,
+  update,
+  getOne,
+  deleteOne
+};
