@@ -100,7 +100,7 @@ const getOne = async (request, response) => {
 
 const deleteOne = async (request, response) => {
   const { param } = request.params;
-  const idClause = isNaN(parseInt(param, 10)) ? '-1' : param;
+  const idClause = Number.isNaN(parseInt(param, 10)) ? '-1' : param;
   try {
     const user = await models.User.destroy({
       where: {
