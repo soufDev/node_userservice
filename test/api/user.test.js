@@ -443,10 +443,10 @@ describe('delete User', () => {
 });
 
 after(async () => {
-  // await models.User.destroy({
-  //   where: {},
-  //   truncate: true
-  // });
+  await models.User.destroy({
+    where: {},
+    truncate: true
+  });
   request.close();
   process.exit();
 });
