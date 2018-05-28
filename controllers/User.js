@@ -7,7 +7,7 @@ const { Op } = Sequelize;
 const getAll = async (request, response) => {
   try {
     const result = await models.User.findAll();
-    response.send(result);
+    response.send({ users: result });
   } catch (e) {
     console.error('Error User Get All', e.message);
     response.send(e);
@@ -100,7 +100,7 @@ const getOne = async (request, response) => {
 
 const deleteOne = async (request, response) => {
   const { param } = request.params;
-  const idClause = isNaN(parseInt(param, 10)) ? '-1' : param;
+  const idClause = Number.isNaN(parseInt(param, 10)) ? '-1' : param;
   try {
     const user = await models.User.destroy({
       where: {
