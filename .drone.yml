@@ -1,0 +1,14 @@
+pipeline:
+  build:
+    image: node:latest
+    commands: npm install
+  test:
+    image: node:latest
+    commands: npm test
+
+  services:
+    database:
+      image: mysql
+      environment:
+        - MYSQL_DATABASE=database_test
+        - MYSQL_ALLOW_EMPTY_PASSWORD=yes
