@@ -441,6 +441,7 @@ describe('delete User', () => {
     expect(result.status).to.be.equal(200);
   })
 });
+
 after(async () => {
   await models.User.destroy({
     where: {},
