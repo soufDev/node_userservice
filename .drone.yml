@@ -4,7 +4,11 @@ pipeline:
     commands: npm install
   test:
     image: node:latest
-    commands: npm test
+    environment:
+     - NODE_ENV=test
+    commands:
+      - sleep 20
+      - npm test
 
 services:
   database:
