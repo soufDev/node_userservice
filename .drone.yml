@@ -10,5 +10,5 @@ services:
   database:
     image: mysql
     environment:
-      - MYSQL_DATABASE=test
+      - MYSQL_DATABASE=database_test
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
