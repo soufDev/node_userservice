@@ -1,6 +1,5 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import Promise from 'bluebird';
 import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
@@ -34,13 +33,11 @@ before(async () => {
 chai.use(chaiHttp);
 const {
   expect
-} = chai;
-const request = chai.request(app);
-Promise.promisifyAll(request);
+} = chai
 describe('User API', () => {
   it('GET all', async () => {
     console.log(env);
-    const result = await request.get(`${URI_PREFIX}/users`);
+    const result = await chai.request(app).get(`${URI_PREFIX}/users`);
     expect(result.body.users).to.be.an('array');
   });
   it('add user', async () => {
@@ -447,6 +444,5 @@ after(async () => {
     where: {},
     truncate: true
   });
-  request.close();
   process.exit();
 });
