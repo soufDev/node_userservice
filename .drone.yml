@@ -7,7 +7,7 @@ pipeline:
     commands: npm test
 
 services:
-  database:
+  database_test:
     image: mysql
     environment:
       - MYSQL_DATABASE=test
