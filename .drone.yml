@@ -15,4 +15,4 @@ services:
     image: mysql
     environment:
       - MYSQL_DATABASE=database_test
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=root
