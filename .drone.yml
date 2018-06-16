@@ -1,7 +1,9 @@
 pipeline:
   build:
     image: node:latest
-    commands: npm install
+    commands:
+      - npm install
+      - npm sequelize:migrate
   test:
     image: node:latest
     environment:
@@ -13,7 +15,9 @@ pipeline:
 services:
   database:
     image: mysql
-    command: apt-get update && apt-get install mysql-server
+    commands:
+      - apt-get update
+      - apt-get install mysql-server
     environment:
       - MYSQL_DATABASE=database_test
       - MYSQL_ROOT_PASSWORD=root
