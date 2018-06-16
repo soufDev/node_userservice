@@ -2,8 +2,9 @@ pipeline:
   build:
     image: node:latest
     commands:
-      - npm install
-      - npm run sequelize db:migrate
+      - npm i -g yarn
+      - yarn install
+      - yarn sequelize db:migrate
   test:
     image: node:latest
     environment:
