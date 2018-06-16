@@ -13,7 +13,7 @@ pipeline:
 services:
   database:
     image: mysql
-    command: apt-get install mysql-client
+    command: apt-get install mysql-server
     environment:
       - MYSQL_DATABASE=database_test
       - MYSQL_ROOT_PASSWORD=root
