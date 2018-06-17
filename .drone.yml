@@ -16,8 +16,6 @@ pipeline:
 services:
   database:
     image: mysql
-    port:
-      - 3306:3306
     commands:
       - apt-get update
       - apt-get install -y mysql-server
@@ -25,3 +23,5 @@ services:
       - MYSQL_DATABASE=database_test
       - MYSQL_ROOT_PASSWORD=root
       - HOST_HOSTNAME=database
+    ports:
+      - 3306:3306
