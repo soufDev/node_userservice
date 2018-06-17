@@ -19,7 +19,6 @@ services:
     commands:
       - apt-get update
       - apt-get install -y mysql-client
-      - apt-get install -y mysql-server
     environment:
       - MYSQL_DATABASE=database_test
       - MYSQL_ROOT_PASSWORD=root
