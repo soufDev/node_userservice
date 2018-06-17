@@ -16,6 +16,8 @@ pipeline:
 services:
   database:
     image: mysql
+    port:
+      - 3306:3306
     commands:
       - apt-get update
       - apt-get install -y mysql-server
