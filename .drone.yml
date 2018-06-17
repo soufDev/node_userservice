@@ -23,5 +23,3 @@ services:
       - MYSQL_DATABASE=database_test
       - MYSQL_ROOT_PASSWORD=root
       - HOST_HOSTNAME=database
-    ports:
-      - 3306:3306
