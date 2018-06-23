@@ -4,21 +4,21 @@ module.exports = {
     username: 'root',
     password: 'root',
     database: 'database_test',
-    host: 'localhost',
+    host: 'database',
     dialect: 'mysql'
   },
   test: {
     username: 'root',
     password: 'root',
     database: 'database_test',
-    host: 'localhost',
+    host: 'database',
     dialect: 'mysql'
   },
   production: {
     username: 'root',
     password: 'root',
     database: 'database_test',
-    host: 'localhost',
+    host: 'database',
     dialect: 'mysql'
   }
 }
