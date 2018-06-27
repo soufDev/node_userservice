@@ -1,3 +1,25 @@
+import mongoose, { Schema, Model } from 'mongoose';
+
+class User {
+
+}
+
+const userScheam = Schema({
+  username: {
+    type: String,
+    required: true
+  },
+  lastname: {
+    type: String
+  },
+  firstname: {
+    type: String
+  },
+  email: {
+    type: String
+  }
+})
+
 export default (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     firstname: {
