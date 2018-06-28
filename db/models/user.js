@@ -17,6 +17,13 @@ const userScheam = Schema({
   },
   email: {
     type: String
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  about: {
+    type: String
   }
 })
 
