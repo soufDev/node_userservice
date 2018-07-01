@@ -1,11 +1,15 @@
 import mongoose, { Schema, Model } from 'mongoose';
 import userSchema from '../schemas/user';
+import db from '../../core/config/dbConfig';
 
 class User {
   static findOne(id) {
 
   }
 }
+
+userSchema.loadClass(User);
+export default db.model('User', userSchema);
 
 // export default (sequelize, DataTypes) => {
 //   const User = sequelize.define('User', {
