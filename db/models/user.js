@@ -1,4 +1,3 @@
-import mongoose, { Schema, Model } from 'mongoose';
 import userSchema from '../schemas/User';
 import db from '../../core/config/dbConfig';
 
