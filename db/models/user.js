@@ -2,9 +2,6 @@ import userSchema from '../schemas/User';
 import db from '../../core/config/dbConfig';
 
 class User {
-  static findOne(id) {
-
-  }
 }
 
 userSchema.loadClass(User);
