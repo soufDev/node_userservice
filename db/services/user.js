@@ -1,11 +1,14 @@
+import mongoose from 'mongoose';
 import userSchema from '../schemas/User';
-import db from '../../core/config/dbConfig';
 
 class User {
+  static getAll() {
+    return this.find({});
+  }
 }
 
 userSchema.loadClass(User);
-export default db.model('User', userSchema);
+export default mongoose.model('User', userSchema);
 
 // export default (sequelize, DataTypes) => {
 //   const User = sequelize.define('User', {
@@ -65,7 +68,7 @@ export default db.model('User', userSchema);
 //       ]
 //     }
 //   });
-//   User.associate = (models) => {
+//   User.associate = (services) => {
 //     // associations can be defined here
 //   };
 //   return User;

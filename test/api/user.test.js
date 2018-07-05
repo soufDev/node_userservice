@@ -3,7 +3,7 @@ import chaiHttp from 'chai-http';
 import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
-import models from '../../db/models';
+import models from '../../db/services';
 
 const URI_PREFIX = '/api/v1';
 const addUser = async () => {

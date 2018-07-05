@@ -1,12 +1,19 @@
-import { connect } from 'mongoose';
+import Mongoose from 'mongoose';
+import logger from '../logger/app-logger';
 import Config from './config.dev';
 
-const { dbHost, dbName } = Config;
-const urlConnect = `mongodb://${dbHost}/${dbName}`;
+Mongoose.promise = global.Promise;
 
-const db = connect(urlConnect);
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.info('success of connection to mongoDB');
-});
-export default db;
+const dbConnection = async () => {
+  const { dbHost, dbName } = Config;
+  const urlConnect = `mongodb://${dbHost}/${dbName}`;
+  try {
+    logger.info(urlConnect);
+    await Mongoose.connect(urlConnect);
+    logger.info('Connected to Mongo');
+  } catch (e) {
+    logger.error(e.message);
+  }
+
+}
+export default dbConnection;
