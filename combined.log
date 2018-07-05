@@ -27,3 +27,20 @@
 {"message":"Connected to Mongo","level":"info"}
 {"message":"mongodb://localhost/user-service","level":"info"}
 {"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"_user2.default.findAll is not a function","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"_user2.default.findAll is not a function","level":"error"}
+{"message":"_user2.default.findAll is not a function","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}

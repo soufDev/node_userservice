@@ -1,10 +1,11 @@
 import express from 'express';
 import UserController from '../controllers/User';
+import userController from '../controllers/userController';
 
 const router = express.Router();
 
 router.get('/users', (request, response) => {
-  UserController.getAll(request, response);
+  userController.getAll(request, response);
 });
 
 router.post('/users', (request, response) => {
