@@ -1,6 +1,7 @@
 import express from 'express';
 import UserController from '../controllers/User';
 import userController from '../controllers/userController';
+import { emailValidator, usernameValidator } from '../validator/uniqueValidator';
 
 const router = express.Router();
 
@@ -8,8 +9,8 @@ router.get('/users', (request, response) => {
   userController.getAll(request, response);
 });
 
-router.post('/users', (request, response) => {
-  UserController.add(request, response);
+router.post('/users', usernameValidator, emailValidator, (request, response) => {
+  userController.add(request, response);
 });
 
 router.put('/user/:id', (request, response) => {

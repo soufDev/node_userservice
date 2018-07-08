@@ -49,6 +49,7 @@
 		"pg": "^7.4.1",
 		"pg-hstore": "^2.3.2",
 		"sequelize": "^4.37.6",
+		"validator": "^10.4.0",
 		"winston": "^3.0.0",
 		"winston-daily-rotate-file": "^3.2.3"
 	},

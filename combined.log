@@ -44,3 +44,445 @@
 {"message":"sending all users","level":"info"}
 {"message":"mongodb://localhost/user-service","level":"info"}
 {"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"usu"},"kind":"minlength","path":"username","value":"usu","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"usu"},"kind":"minlength","path":"username","value":"usu","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"Cannot read property 'user' of undefined","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}

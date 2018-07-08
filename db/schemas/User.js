@@ -1,9 +1,12 @@
 import { Schema } from 'mongoose';
+import { isEmail } from 'validator';
 
 const userSchema = new Schema({
   username: {
     type: String,
-    required: true
+    required: [true, 'username.required'],
+    minlength: [6, 'username.short.length'],
+    unique: true,
   },
   lastname: {
     type: String
@@ -12,14 +15,25 @@ const userSchema = new Schema({
     type: String
   },
   email: {
-    type: String
+    type: String,
+    required: [true, 'email.required'],
+    validate: {
+      validator: isEmail,
+      message: 'invalid.email'
+    },
+    unique: true
   },
   password: {
     type: String,
-    required: true
+    min: [8, 'password.short.length']
   },
   about: {
     type: String
+  },
+  active: {
+    type: String,
+    enum: [false, true],
+    default: true
   }
 });
 

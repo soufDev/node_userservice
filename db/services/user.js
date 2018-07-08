@@ -5,6 +5,10 @@ class User {
   static getAll() {
     return this.find({});
   }
+
+  static async add(user) {
+    return user.save();
+  }
 }
 
 userSchema.loadClass(User);

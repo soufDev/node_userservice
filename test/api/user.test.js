@@ -3,7 +3,7 @@ import chaiHttp from 'chai-http';
 import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
-import models from '../../db/services';
+import User from '../../db/services/user';
 
 const URI_PREFIX = '/api/v1';
 const addUser = async () => {
@@ -22,11 +22,6 @@ const addUser = async () => {
 }
 
 before(async () => {
-  await models.User.destroy({
-    where: {},
-    truncate: true
-  });
-  await addUser();
   process.env.SERVER_PORT = 3000;
 });
 
@@ -68,7 +63,8 @@ describe('User API', () => {
     try {
       const result = await chai.request(app).post(`${URI_PREFIX}/users`)
         .send({ user });
-      expect(result.status).to.be.equal(400)
+      expect(result.status).to.be.equal(400);
+      expect(result.body.error).to.be.equal('required.password');
     } catch (e) {
       expect(e.message).to.be.equal('error')
     }
@@ -87,7 +83,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+      expect(result.body.errors.username.message).to.be.equal('username.required');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -107,7 +103,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+      expect(result.body.errors.username.message).to.be.equal('username.required');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -116,7 +112,7 @@ describe('User API', () => {
 
   it('add user with short username', async () => {
     const user = {
-      username: 'us',
+      username: 'usu',
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -128,16 +124,16 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('len');
+      expect(result.body.errors.username.message).to.be.equal('username.short.length');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
     }
   });
   it('add user with existing username', async () => {
-    const existingUser = await models.User.findById(1);
+    const users = await User.getAll();
     const user = {
-      username: existingUser.username,
+      username: users[0].username,
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -147,9 +143,10 @@ describe('User API', () => {
     try {
       const result = await chai.request(app)
         .post(`${URI_PREFIX}/users`)
-        .send({user});
+        .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+      console.log('length', users.length);
+      expect(result.body.message.toLowerCase()).to.be.equal('username already exist');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -169,7 +166,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+      expect(result.body.errors.email.message).to.be.equal('email.required');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -189,14 +186,14 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+      expect(result.body.errors.email.message).to.be.equal('email.required');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
     }
   });
 
-  it('add user with invalid email', async () => {
+  it.only('add user with invalid email', async () => {
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
@@ -210,7 +207,7 @@ describe('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.validation_errors[0].validatorKey).to.be.equal('isEmail');
+      expect(result.body.errors.email.message).to.be.equal('invalid.email');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -440,9 +437,5 @@ describe('delete User', () => {
 });
 
 after(async () => {
-  await models.User.destroy({
-    where: {},
-    truncate: true
-  });
   process.exit();
 });
