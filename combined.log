@@ -486,3 +486,5 @@
 {"message":"Connected to Mongo","level":"info"}
 {"message":"mongodb://localhost/user-service","level":"info"}
 {"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
