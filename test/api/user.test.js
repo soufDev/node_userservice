@@ -193,7 +193,7 @@ describe('User API', () => {
     }
   });
 
-  it('add user with invalid email', async () => {
+  it.only('add user with invalid email', async () => {
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
