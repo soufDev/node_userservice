@@ -488,3 +488,6 @@
 {"message":"Connected to Mongo","level":"info"}
 {"message":"mongodb://localhost/user-service","level":"info"}
 {"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-service","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}

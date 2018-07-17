@@ -172,7 +172,7 @@ describe('User API', () => {
       expect(e.message).to.be.equal('error');
     }
   });
-  it('add user with empty email', async () => {
+  it.only('add user with empty email', async () => {
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
@@ -193,7 +193,7 @@ describe('User API', () => {
     }
   });
 
-  it.only('add user with invalid email', async () => {
+  it('add user with invalid email', async () => {
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
