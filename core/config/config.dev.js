@@ -1,5 +1,6 @@
 import ENV from './env';
 
+console.log(ENV);
 const Config = {
   serverPort: ENV.SERVER_PORT || 9000,
   dbHost: ENV.DB_HOST || 'localhost',

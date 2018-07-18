@@ -7,7 +7,7 @@ pipeline:
   test:
     image: node:latest
     environment:
-     - NODE_ENV=test
+     - NODE_ENV=development
     commands:
       - sleep 20
       - npm test
