@@ -16,3 +16,5 @@ pipeline:
 services:
   database:
     image: mongo
+    environment:
+      - MONGO_DB=user-service
