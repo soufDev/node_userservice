@@ -4,7 +4,6 @@ pipeline:
     commands:
       - npm i -g yarn
       - yarn install
-      - yarn sequelize db:migrate
   test:
     image: node:latest
     environment:
