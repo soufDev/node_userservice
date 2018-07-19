@@ -152,7 +152,7 @@ describe('User API', () => {
       expect(e.message).to.be.equal('error');
     }
   });
-  it('add user with null email', async () => {
+  it.only('add user with null email', async () => {
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
