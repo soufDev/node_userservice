@@ -47,6 +47,7 @@ describe.only('User API', () => {
     const result = await chai.request(app)
       .post(`${URI_PREFIX}/users`)
       .send({ user });
+    console.log(result.body);
     expect(result.body).to.be.an('object');
     expect(result.body).to.not.have.key('password');
     expect(result.status).to.be.equal(201);
@@ -313,7 +314,7 @@ describe.only('update user', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: body.email
+      email: body.email.toLowerCase()
     }
     const result = await chai.request(app)
       .put(`${URI_PREFIX}/user/${body._id}`)
@@ -374,13 +375,22 @@ describe.only('update user', () => {
   });
   it('update user successfully', async () => {
     const body = await addUser();
+    console.log(body);
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastName: faker.name.lastName(),
       about: faker.lorem.text(),
-
+      email: faker.internet.email().toLowerCase()
     }
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${body._id}`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.status).to.be.equal(200);
+    const retrievedUser = await User.findById(body._id);
+    console.log({ retrievedUser });
+    expect(result.user.username).to.be.equal(user.username);
   })
 });
 

@@ -60,8 +60,8 @@ class userController {
           .json({ ...errors })
           .end();
       } else {
-        const updatedUser = await User.update(user.id, user);
-        response.status(200).json({ user: updatedUser }).end();
+        const updatedUser = await User.update(request.params.id, userToUpdate);
+        response.status(200).json({ user: updatedUser._doc }).end();
       }
     } catch (e) {
       logger.error(e.message);
