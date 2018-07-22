@@ -13,8 +13,8 @@ router.post('/users', usernameValidator, emailValidator, (request, response) => 
   userController.add(request, response);
 });
 
-router.put('/user/:id', (request, response) => {
-  UserController.update(request, response);
+router.put('/user/:id', usernameValidator, emailValidator, (request, response) => {
+  userController.update(request, response);
 });
 
 router.get('/user/:param', (request, response) => {

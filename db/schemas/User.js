@@ -22,7 +22,8 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    min: [8, 'password.short.length']
+    min: [8, 'password.short.length'],
+    select: false
   },
   about: {
     type: String
@@ -33,5 +34,16 @@ const userSchema = new Schema({
     default: true
   }
 });
+
+userSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  getters: true,
+  tranform: (doc, ret, options) => {
+    ret.id = ret._id;
+    delete ret._id;
+    delete ret.__v;
+  }
+})
 
 export default userSchema;

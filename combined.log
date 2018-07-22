@@ -558,3 +558,258 @@
 {"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
 {"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
 {"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"sou@sdsd"},"kind":"user defined","path":"email","value":"sou@sdsd","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Emanuel_Armstrong91@gmail.com"},"kind":"user defined","path":"email","value":"Emanuel_Armstrong91@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Franco_Breitenberg@gmail.com"},"kind":"user defined","path":"email","value":"Franco_Breitenberg@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Everardo_Mitchell@gmail.com"},"kind":"user defined","path":"email","value":"Everardo_Mitchell@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Abelardo_Heaney@gmail.com"},"kind":"user defined","path":"email","value":"Abelardo_Heaney@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"diamond_schinner@gmail.com"},"kind":"user defined","path":"email","value":"diamond_schinner@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"Lew88"},"kind":"minlength","path":"username","value":"Lew88","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"user.validateSync is not a function","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"user.validateSync is not a function","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Mohammed_Cronin68@gmail.com"},"kind":"user defined","path":"email","value":"Mohammed_Cronin68@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":"Can't set headers after they are sent.","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"Can't set headers after they are sent.","level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"trinity_schmidt@gmail.com"},"kind":"user defined","path":"email","value":"trinity_schmidt@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username"},"kind":"required","path":"username","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"Dora3"},"kind":"minlength","path":"username","value":"Dora3","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username"},"kind":"required","path":"username","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"kathryn_yundt11@gmail.com"},"kind":"user defined","path":"email","value":"kathryn_yundt11@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"luther_bayer59@gmail.com"},"kind":"user defined","path":"email","value":"luther_bayer59@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"domenica_douglas42@gmail.com"},"kind":"user defined","path":"email","value":"domenica_douglas42@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Colton_Ortiz@gmail.com"},"kind":"user defined","path":"email","value":"Colton_Ortiz@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"melissa_connelly66@gmail.com"},"kind":"user defined","path":"email","value":"melissa_connelly66@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"rosalia_kemmer87@gmail.com"},"kind":"user defined","path":"email","value":"rosalia_kemmer87@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username"},"kind":"required","path":"username","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Mona_Adams19@gmail.com"},"kind":"user defined","path":"email","value":"Mona_Adams19@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Anika_Treutel@gmail.com"},"kind":"user defined","path":"email","value":"Anika_Treutel@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"harry_smitham@gmail.com"},"kind":"user defined","path":"email","value":"harry_smitham@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"thaddeus_fritsch5@gmail.com"},"kind":"user defined","path":"email","value":"thaddeus_fritsch5@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"abigail_volkman@gmail.com"},"kind":"user defined","path":"email","value":"abigail_volkman@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"jaunita_hoeger25@gmail.com"},"kind":"user defined","path":"email","value":"jaunita_hoeger25@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required","name":"ValidationError","level":"error"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"usu"},"kind":"minlength","path":"username","value":"usu","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError","level":"error"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
+{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError","level":"error"}
+{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"Jo28"},"kind":"minlength","path":"username","value":"Jo28","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"sou@sdsd"},"kind":"user defined","path":"email","value":"sou@sdsd","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length, email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.short.length","name":"ValidatorError","properties":{"message":"username.short.length","type":"minlength","minlength":6,"path":"username","value":"az"},"kind":"minlength","path":"username","value":"az","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.short.length","name":"ValidationError"}},"level":"error"}
+{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"nathan_jaskolski93@gmail.com"},"kind":"user defined","path":"email","value":"nathan_jaskolski93@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError","level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":null},"kind":"required","path":"username","value":null,"$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Maia_Herzog@gmail.com"},"kind":"user defined","path":"email","value":"Maia_Herzog@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"username":{"message":"username.required","name":"ValidatorError","properties":{"message":"username.required","type":"required","path":"username","value":""},"kind":"required","path":"username","value":"","$isValidatorError":true},"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"Fernando_Herzog35@gmail.com"},"kind":"user defined","path":"email","value":"Fernando_Herzog35@gmail.com","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: username: username.required, email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azeazeazeaze"},"kind":"user defined","path":"email","value":"azeazeazeaze","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":{"errors":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}
+{"message":"mongodb://localhost/user-database","level":"info"}
+{"message":"Connected to Mongo","level":"info"}
+{"message":"sending all users","level":"info"}

@@ -26,7 +26,7 @@ class userController {
         if (error) {
           response.status(400).json({ error: 'required.password' }).end();
         }
-        const userToStore = new User({ ...user, password: hash });
+        const userToStore = User({ ...user, password: hash });
         const err = await userToStore.validateSync();
         if (err) {
           logger.error(err);
@@ -36,7 +36,7 @@ class userController {
             .end();
         } else {
           const newUser = await User.add(userToStore);
-          response.status(201).json({ ...newUser }).end();
+          response.status(201).json({ ...newUser._doc }).end();
         }
       })
     } catch (e) {
@@ -48,6 +48,29 @@ class userController {
     }
   }
 
+  static async update(request, response) {
+    try {
+      const { user } = request.body;
+      const userToUpdate = User({ ...user })
+      const errors = await userToUpdate.validateSync();
+      if (errors) {
+        logger.error({ errors });
+        response
+          .status(400)
+          .json({ ...errors })
+          .end();
+      } else {
+        const updatedUser = await User.update(user.id, user);
+        response.status(200).json({ user: updatedUser }).end();
+      }
+    } catch (e) {
+      logger.error(e.message);
+      response
+        .status(500)
+        .json({ error: e })
+        .end();
+    }
+  }
 }
 
 export default userController;

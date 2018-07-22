@@ -9,6 +9,10 @@ class User {
   static async add(user) {
     return user.save();
   }
+
+  static async update(id, user) {
+    return this.findByIdAndUpdate(id, user);
+  }
 }
 
 userSchema.loadClass(User);

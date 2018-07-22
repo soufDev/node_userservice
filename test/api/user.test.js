@@ -13,12 +13,12 @@ const addUser = async () => {
     username: faker.internet.userName(),
     about: faker.lorem.words(),
     password: faker.internet.password(),
-    email: faker.internet.email()
+    email: faker.internet.email().toLowerCase()
   }
   const result = await chai.request(app)
     .post(`${URI_PREFIX}/users`)
     .send({ user: userToAdd });
-  return result.body.id;
+  return result.body;
 }
 
 before(async () => {
@@ -235,44 +235,44 @@ describe.only('User API', () => {
     }
   });
 });
-describe('update user', () => {
+describe.only('update user', () => {
   it('update user with existing username', async () => {
-    const id = await addUser();
-    const existingUser = await models.User.findById(1);
+    const body = await addUser();
+    const existingUser = await User.findById(body._id);
     const user = {
-      username: existingUser.username,
+      username: body.username,
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+    expect(result.body.message).to.be.equal('username.exist');
     expect(result.status).to.be.equal(400);
   });
   it('update user with short username', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: 'az',
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
-    console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('len');
+    console.log(result.body.errors);
+    expect(result.body.errors.username.message).to.be.equal('username.short.length');
     expect(result.status).to.be.equal(400);
   });
   it('update user with null username', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: null,
       firstname: faker.name.firstName(),
@@ -282,14 +282,14 @@ describe('update user', () => {
       email: faker.internet.email()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+    expect(result.body.errors.username.message).to.be.equal('username.required');
     expect(result.status).to.be.equal(400);
   });
   it('update user with empty username', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: '',
       firstname: faker.name.firstName(),
@@ -299,32 +299,31 @@ describe('update user', () => {
       email: faker.internet.email()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+    expect(result.body.errors.username.message).to.be.equal('username.required');
     expect(result.status).to.be.equal(400);
   });
   it('update user with existing email', async () => {
-    const id = await addUser();
-    const existingUser = await models.User.findById(1);
+    const body = await addUser();
     const user = {
-      username: existingUser.username,
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: body.email
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('not_unique');
+    expect(result.body.message).to.be.equal('email.exist');
     expect(result.status).to.be.equal(400);
   });
   it('update user with invalid email', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
@@ -334,14 +333,14 @@ describe('update user', () => {
       email: 'azeazeazeaze'
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('isEmail');
+    expect(result.body.errors.email.message).to.be.equal('email.invalid');
     expect(result.status).to.be.equal(400);
   });
   it('update user with null email', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
@@ -351,29 +350,38 @@ describe('update user', () => {
       email: null
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('is_null');
+    expect(result.body.errors.email.message).to.be.equal('email.required');
     expect(result.status).to.be.equal(400);
   });
   it('update user with empty email', async () => {
-    const id = await addUser();
+    const body = await addUser();
     const user = {
       username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
-      password: faker.internet.password(),
       email: ''
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${id}`)
+      .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.validation_errors[0].validatorKey).to.be.equal('notEmpty');
+    expect(result.body.errors.email.message).to.be.equal('email.required');
     expect(result.status).to.be.equal(400);
   });
+  it('update user successfully', async () => {
+    const body = await addUser();
+    const user = {
+      username: faker.internet.userName(),
+      firstname: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      about: faker.lorem.text(),
+
+    }
+  })
 });
 
 describe('find User', () => {
