@@ -373,7 +373,7 @@ describe.only('update user', () => {
     expect(result.body.errors.email.message).to.be.equal('email.required');
     expect(result.status).to.be.equal(400);
   });
-  it('update user successfully', async () => {
+  it.only('update user successfully', async () => {
     const body = await addUser();
     console.log(body);
     const user = {
