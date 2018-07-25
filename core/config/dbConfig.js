@@ -5,8 +5,8 @@ import Config from './config.dev';
 Mongoose.promise = global.Promise;
 
 const dbConnection = async () => {
-  const { dbHost, dbName } = Config;
-  const urlConnect = `mongodb://${dbHost}/${dbName}`;
+  const { dbHost, dbName, dbPort } = Config;
+  const urlConnect = `mongodb://${dbHost}:${dbPort}/${dbName}`;
   try {
     logger.info(urlConnect);
     await Mongoose.connect(urlConnect, { useNewUrlParser: true });
