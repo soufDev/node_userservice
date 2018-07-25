@@ -29,7 +29,7 @@ chai.use(chaiHttp);
 const {
   expect
 } = chai
-describe.only('User API', () => {
+describe('User API', () => {
   it('GET all', async () => {
     console.log(env);
     const result = await chai.request(app).get(`${URI_PREFIX}/users`);
@@ -236,7 +236,7 @@ describe.only('User API', () => {
     }
   });
 });
-describe.only('update user', () => {
+describe('update user', () => {
   it('update user with existing username', async () => {
     const body = await addUser();
     const existingUser = await User.findById(body._id);
@@ -383,6 +383,7 @@ describe.only('update user', () => {
       about: faker.lorem.text(),
       email: faker.internet.email().toLowerCase()
     }
+    console.log({ userToUpdate: user });
     const result = await chai.request(app)
       .put(`${URI_PREFIX}/user/${body._id}`)
       .send({ user });
@@ -390,7 +391,7 @@ describe.only('update user', () => {
     expect(result.status).to.be.equal(200);
     const retrievedUser = await User.findById(body._id);
     console.log({ retrievedUser });
-    expect(result.user.username).to.be.equal(user.username);
+    expect(result.body.user.username).to.be.equal(user.username);
   })
 });
 

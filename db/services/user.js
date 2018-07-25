@@ -11,7 +11,8 @@ class User {
   }
 
   static async update(id, user) {
-    return this.findByIdAndUpdate(id, { ...user });
+    const updatedUser = await this.findByIdAndUpdate(id, user);
+    return user;
   }
 }
 

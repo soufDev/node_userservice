@@ -51,7 +51,7 @@ class userController {
   static async update(request, response) {
     try {
       const { user } = request.body;
-      const userToUpdate = User({ ...user })
+      const userToUpdate = User({ ...user, _id: request.params.id })
       const errors = await userToUpdate.validateSync();
       if (errors) {
         logger.error({ errors });
