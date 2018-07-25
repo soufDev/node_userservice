@@ -10,7 +10,7 @@ pipeline:
     environment:
      - NODE_ENV=test
     commands:
-      - sleep 20
+      - sleep 5
       - npm test
 
 services:

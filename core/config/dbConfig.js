@@ -9,7 +9,7 @@ const dbConnection = async () => {
   const urlConnect = `mongodb://${dbHost}/${dbName}`;
   try {
     logger.info(urlConnect);
-    await Mongoose.connect(urlConnect);
+    await Mongoose.connect(urlConnect, { useNewUrlParser: true });
     logger.info('Connected to Mongo');
   } catch (e) {
     logger.error(e.message);
