@@ -6,8 +6,12 @@ class userController {
   static async getAll(request, response) {
     try {
       const users = await User.getAll();
+      const toJson = users.map((user) => {
+        const { _doc } = user;
+        return _doc;
+      });
       logger.info('sending all users');
-      response.send({ users });
+      response.send({ users: toJson });
     } catch (e) {
       logger.error(e.message);
       response
@@ -36,7 +40,7 @@ class userController {
             .end();
         } else {
           const newUser = await User.add(userToStore);
-          response.status(201).json({ ...newUser._doc }).end();
+          response.status(201).json({ ...newUser.toJSON() }).end();
         }
       })
     } catch (e) {
@@ -61,7 +65,7 @@ class userController {
           .end();
       } else {
         const updatedUser = await User.update(request.params.id, userToUpdate);
-        response.status(200).json({ user: updatedUser._doc }).end();
+        response.status(200).json({ user: userToUpdate.toJSON() }).end();
       }
     } catch (e) {
       logger.error(e.message);

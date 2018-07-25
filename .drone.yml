@@ -4,6 +4,7 @@ pipeline:
     commands:
       - npm i -g yarn
       - yarn install
+      - cp .env.example .env
   test:
     image: node:latest
     environment:

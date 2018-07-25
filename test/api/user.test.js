@@ -4,13 +4,14 @@ import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
 import User from '../../db/services/user';
+import UserModel from '../../db/schemas/User';
 
 const URI_PREFIX = '/api/v1';
 const addUser = async () => {
   const userToAdd = {
     firstname: faker.name.firstName(),
     lastname: faker.name.lastName(),
-    username: faker.internet.userName(),
+    username: faker.internet.userName({ minimum: 6 }),
     about: faker.lorem.words(),
     password: faker.internet.password(),
     email: faker.internet.email().toLowerCase()
@@ -22,6 +23,8 @@ const addUser = async () => {
 }
 
 before(async () => {
+  await User.deleteAll();
+  await addUser();
   process.env.SERVER_PORT = 3000;
 });
 
@@ -29,20 +32,21 @@ chai.use(chaiHttp);
 const {
   expect
 } = chai
-describe('User API', () => {
+describe.only('User API', () => {
   it('GET all', async () => {
     console.log(env);
     const result = await chai.request(app).get(`${URI_PREFIX}/users`);
+    console.log(result.body.users.length);
     expect(result.body.users).to.be.an('array');
   });
   it('add user', async () => {
     const user = {
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: '1morhpkiehny@personalcok.gq'
     }
     const result = await chai.request(app)
       .post(`${URI_PREFIX}/users`)
@@ -56,10 +60,10 @@ describe('User API', () => {
     const user = {
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       about: faker.lorem.words(),
       password: null,
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     try {
       const result = await chai.request(app).post(`${URI_PREFIX}/users`)
@@ -77,7 +81,7 @@ describe('User API', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     try {
       const result = await chai.request(app)
@@ -97,7 +101,7 @@ describe('User API', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     try {
       const result = await chai.request(app)
@@ -118,7 +122,7 @@ describe('User API', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     try {
       const result = await chai.request(app)
@@ -139,7 +143,7 @@ describe('User API', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     try {
       const result = await chai.request(app)
@@ -155,7 +159,7 @@ describe('User API', () => {
   });
   it('add user with null email', async () => {
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -175,7 +179,7 @@ describe('User API', () => {
   });
   it('add user with empty email', async () => {
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -196,7 +200,7 @@ describe('User API', () => {
 
   it('add user with invalid email', async () => {
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -217,7 +221,7 @@ describe('User API', () => {
   it('add user with existing email', async () => {
     const existingUser = await User.getAll();
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -236,10 +240,9 @@ describe('User API', () => {
     }
   });
 });
-describe('update user', () => {
+describe.only('update user', () => {
   it('update user with existing username', async () => {
     const body = await addUser();
-    const existingUser = await User.findById(body._id);
     const user = {
       username: body.username,
       firstname: faker.name.firstName(),
@@ -249,7 +252,7 @@ describe('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.message).to.be.equal('username.exist');
@@ -266,7 +269,7 @@ describe('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body.errors);
     expect(result.body.errors.username.message).to.be.equal('username.short.length');
@@ -280,10 +283,10 @@ describe('update user', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.username.message).to.be.equal('username.required');
@@ -297,10 +300,10 @@ describe('update user', () => {
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: faker.internet.email()
+      email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.username.message).to.be.equal('username.required');
@@ -309,15 +312,15 @@ describe('update user', () => {
   it('update user with existing email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: body.email.toLowerCase()
+      email: body.email
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.message).to.be.equal('email.exist');
@@ -326,7 +329,7 @@ describe('update user', () => {
   it('update user with invalid email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -334,7 +337,7 @@ describe('update user', () => {
       email: 'azeazeazeaze'
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.invalid');
@@ -343,7 +346,7 @@ describe('update user', () => {
   it('update user with null email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -351,7 +354,7 @@ describe('update user', () => {
       email: null
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.required');
@@ -360,36 +363,36 @@ describe('update user', () => {
   it('update user with empty email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minimum: 6 }),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       email: ''
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.required');
     expect(result.status).to.be.equal(400);
   });
-  it.only('update user successfully', async () => {
+  it('update user successfully', async () => {
     const body = await addUser();
     console.log(body);
     const user = {
-      username: faker.internet.userName(),
+      username: faker.internet.userName({ minmum: 6 }),
       firstname: faker.name.firstName(),
       lastName: faker.name.lastName(),
       about: faker.lorem.text(),
-      email: faker.internet.email().toLowerCase()
+      email: 'morhpkiehny@personalcok.gq'
     }
     console.log({ userToUpdate: user });
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body._id}`)
+      .put(`${URI_PREFIX}/user/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.status).to.be.equal(200);
-    const retrievedUser = await User.findById(body._id);
+    const retrievedUser = await User.findById(body.id);
     console.log({ retrievedUser });
     expect(result.body.user.username).to.be.equal(user.username);
   })

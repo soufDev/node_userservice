@@ -1,5 +1,4 @@
 import express from 'express';
-import UserController from '../controllers/User';
 import userController from '../controllers/userController';
 import { emailValidator, usernameValidator } from '../validator/uniqueValidator';
 
@@ -17,12 +16,12 @@ router.put('/user/:id', usernameValidator, emailValidator, (request, response) =
   userController.update(request, response);
 });
 
-router.get('/user/:param', (request, response) => {
-  UserController.getOne(request, response);
+router.get('/user/:id', (request, response) => {
+  userController.getOne(request, response);
 });
 
-router.delete('/user/:param', (request, response) => {
-  UserController.deleteOne(request, response);
+router.delete('/user/:id', (request, response) => {
+  userController.deleteOne(request, response);
 });
 
 export default router;
