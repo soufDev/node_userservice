@@ -4,7 +4,6 @@ import env from 'dotenv';
 import faker from 'faker';
 import app from '../../app';
 import User from '../../db/services/user';
-import UserModel from '../../db/schemas/User';
 
 const URI_PREFIX = '/api/v1';
 const addUser = async () => {
@@ -37,6 +36,7 @@ describe.only('User API', () => {
     console.log(env);
     const result = await chai.request(app).get(`${URI_PREFIX}/users`);
     console.log(result.body.users.length);
+    console.log(result.body.users);
     expect(result.body.users).to.be.an('array');
   });
   it('add user', async () => {
@@ -396,6 +396,26 @@ describe.only('update user', () => {
     console.log({ retrievedUser });
     expect(result.body.user.username).to.be.equal(user.username);
   })
+  it('update user with invalid ID', async () => {
+    const body = await addUser();
+    console.log(body);
+    const user = {
+      username: faker.internet.userName({ minmum: 6 }),
+      firstname: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      about: faker.lorem.text(),
+      email: faker.internet.email().toLowerCase()
+    }
+    console.log({ userToUpdate: user });
+    const result = await chai.request(app)
+      .put(`${URI_PREFIX}/user/${body.id}123`)
+      .send({ user });
+    console.log(result.body);
+    expect(result.status).to.be.equal(400);
+    const retrievedUser = await User.findById(body.id);
+    console.log({ retrievedUser });
+    expect(result.headers['x-error']).to.be.equal('invalid.id.params');
+  })
 });
 
 describe('find User', () => {
@@ -407,7 +427,7 @@ describe('find User', () => {
     expect(result.status).to.be.equal(404);
   });
   it('find user with username', async () => {
-    const { username } = await models.User.findById(await addUser());
+    const { username } = await addUser();
     const result = await chai.request(app)
       .get(`${URI_PREFIX}/user/${username}`);
     console.log(result.body);
@@ -415,7 +435,7 @@ describe('find User', () => {
     expect(result.status).to.be.equal(200);
   })
   it('find user with id', async () => {
-    const { id, username } = await models.User.findById(await addUser());
+    const { id, username } = await addUser();
     const result = await chai.request(app)
       .get(`${URI_PREFIX}/user/${id}`);
     console.log(result.body);
@@ -459,5 +479,6 @@ describe('delete User', () => {
 });
 
 after(async () => {
+  await User.deleteAll();
   process.exit();
 });

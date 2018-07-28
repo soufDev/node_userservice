@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import userSchema from '../schemas/User';
 
 class User {
@@ -11,11 +11,15 @@ class User {
   }
 
   static update(_id, user) {
-    return this.findByIdAndUpdate(_id.toString(), user);
+    return this.findByIdAndUpdate(Types.ObjectId(_id), user);
   }
 
   static deleteAll() {
     return this.remove({});
+  }
+
+  static get(idOrUsername) {
+    return this.findOne({})
   }
 }
 

@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt';
+import { Types } from 'mongoose';
 import User from '../db/services/user';
 import logger from '../core/logger/app-logger';
 
@@ -6,10 +7,7 @@ class userController {
   static async getAll(request, response) {
     try {
       const users = await User.getAll();
-      const toJson = users.map((user) => {
-        const { _doc } = user;
-        return _doc;
-      });
+      const toJson = users.map(user => user.toJSON());
       logger.info('sending all users');
       response.send({ users: toJson });
     } catch (e) {
@@ -64,8 +62,14 @@ class userController {
           .json({ ...errors })
           .end();
       } else {
-        const updatedUser = await User.update(request.params.id, userToUpdate);
-        response.status(200).json({ user: userToUpdate.toJSON() }).end();
+        if (Types.ObjectId.isValid(request.params.id)) {
+          const id = Types.ObjectId(request.params.id);
+          const updatedUser = await User.update(id, userToUpdate);
+          response.status(200).json({ user: userToUpdate.toJSON() }).end();
+        } else {
+          response.append('x-error', 'invalid.id.params');
+          response.status(400).end();
+        }
       }
     } catch (e) {
       logger.error(e.message);
