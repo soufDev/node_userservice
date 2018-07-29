@@ -18,8 +18,12 @@ class User {
     return this.remove({});
   }
 
-  static get(idOrUsername) {
-    return this.findOne({})
+  static get(id) {
+    return this.findOne({ _id: id });
+  }
+
+  static delete(id) {
+    return this.remove({ _id: id });
   }
 }
 

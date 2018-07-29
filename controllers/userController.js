@@ -53,23 +53,19 @@ class userController {
   static async update(request, response) {
     try {
       const { user } = request.body;
-      const userToUpdate = User({ ...user, _id: request.params.id })
+      const id = Types.ObjectId(request.params.id);
+      const userToUpdate = User({ ...user, _id: id });
       const errors = await userToUpdate.validateSync();
       if (errors) {
-        logger.error({ errors });
+        const jsonError = errors.toJSON();
+        logger.error({ jsonError });
         response
           .status(400)
-          .json({ ...errors })
+          .json({ ...jsonError })
           .end();
       } else {
-        if (Types.ObjectId.isValid(request.params.id)) {
-          const id = Types.ObjectId(request.params.id);
-          const updatedUser = await User.update(id, userToUpdate);
-          response.status(200).json({ user: userToUpdate.toJSON() }).end();
-        } else {
-          response.append('x-error', 'invalid.id.params');
-          response.status(400).end();
-        }
+        const updatedUser = await User.update(id, userToUpdate);
+        response.status(200).json({ user: userToUpdate.toJSON() }).end();
       }
     } catch (e) {
       logger.error(e.message);
@@ -78,6 +74,18 @@ class userController {
         .json({ error: e })
         .end();
     }
+  }
+
+  static async findOne(request, response) {
+    const id = Types.ObjectId(request.params.id.toLowerCase());
+    const user = await User.get(id);
+    response.status(200).json({ user: user.toJSON() }).end();
+  }
+
+  static async delete(request, response) {
+    const id = Types.ObjectId(request.params.id.toLowerCase());
+    const deleteResult = await User.delete(id);
+    response.status(204).set('x-code', 'success.delete.user').end();
   }
 }
 

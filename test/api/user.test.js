@@ -10,7 +10,7 @@ const addUser = async () => {
   const userToAdd = {
     firstname: faker.name.firstName(),
     lastname: faker.name.lastName(),
-    username: faker.internet.userName({ minimum: 6 }),
+    username: faker.internet.userName(),
     about: faker.lorem.words(),
     password: faker.internet.password(),
     email: faker.internet.email().toLowerCase()
@@ -31,7 +31,7 @@ chai.use(chaiHttp);
 const {
   expect
 } = chai
-describe.only('User API', () => {
+describe('User API', () => {
   it('GET all', async () => {
     console.log(env);
     const result = await chai.request(app).get(`${URI_PREFIX}/users`);
@@ -43,7 +43,7 @@ describe.only('User API', () => {
     const user = {
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
       email: '1morhpkiehny@personalcok.gq'
@@ -60,7 +60,7 @@ describe.only('User API', () => {
     const user = {
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       about: faker.lorem.words(),
       password: null,
       email: faker.internet.email().toLowerCase()
@@ -151,7 +151,7 @@ describe.only('User API', () => {
         .send({ user });
       console.log(result.body);
       console.log('length', users.length);
-      expect(result.body.message.toLowerCase()).to.be.equal('username.exist');
+      expect(result.headers['x-error']).to.be.equal('username.exist');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
@@ -159,7 +159,7 @@ describe.only('User API', () => {
   });
   it('add user with null email', async () => {
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -179,7 +179,7 @@ describe.only('User API', () => {
   });
   it('add user with empty email', async () => {
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -200,7 +200,7 @@ describe.only('User API', () => {
 
   it('add user with invalid email', async () => {
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -221,7 +221,7 @@ describe.only('User API', () => {
   it('add user with existing email', async () => {
     const existingUser = await User.getAll();
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -233,14 +233,14 @@ describe.only('User API', () => {
         .post(`${URI_PREFIX}/users`)
         .send({ user });
       console.log(result.body);
-      expect(result.body.message).to.be.equal('email.exist');
+      expect(result.headers['x-error']).to.be.equal('email.exist');
       expect(result.status).to.be.equal(400);
     } catch (e) {
       expect(e.message).to.be.equal('error');
     }
   });
 });
-describe.only('update user', () => {
+describe('update user', () => {
   it('update user with existing username', async () => {
     const body = await addUser();
     const user = {
@@ -252,10 +252,10 @@ describe.only('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
-    console.log(result.body);
-    expect(result.body.message).to.be.equal('username.exist');
+    console.log(result.headers);
+    expect(result.headers['x-error']).to.be.equal('username.exist');
     expect(result.status).to.be.equal(400);
   });
   it('update user with short username', async () => {
@@ -269,9 +269,9 @@ describe.only('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
-    console.log(result.body.errors);
+    console.log(result.body);
     expect(result.body.errors.username.message).to.be.equal('username.short.length');
     expect(result.status).to.be.equal(400);
   });
@@ -286,7 +286,7 @@ describe.only('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.username.message).to.be.equal('username.required');
@@ -303,7 +303,7 @@ describe.only('update user', () => {
       email: faker.internet.email().toLowerCase()
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.username.message).to.be.equal('username.required');
@@ -312,7 +312,7 @@ describe.only('update user', () => {
   it('update user with existing email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -320,24 +320,24 @@ describe.only('update user', () => {
       email: body.email
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
-    expect(result.body.message).to.be.equal('email.exist');
+    expect(result.headers['x-error']).to.be.equal('email.exist');
     expect(result.status).to.be.equal(400);
   });
   it('update user with invalid email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       password: faker.internet.password(),
-      email: 'azeazeazeaze'
+      email: 'azaz'
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.invalid');
@@ -346,7 +346,7 @@ describe.only('update user', () => {
   it('update user with null email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
@@ -354,7 +354,7 @@ describe.only('update user', () => {
       email: null
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.required');
@@ -363,14 +363,14 @@ describe.only('update user', () => {
   it('update user with empty email', async () => {
     const body = await addUser();
     const user = {
-      username: faker.internet.userName({ minimum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastname: faker.name.lastName(),
       about: faker.lorem.words(),
       email: ''
     }
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.body.errors.email.message).to.be.equal('email.required');
@@ -380,15 +380,15 @@ describe.only('update user', () => {
     const body = await addUser();
     console.log(body);
     const user = {
-      username: faker.internet.userName({ minmum: 6 }),
+      username: faker.internet.userName(),
       firstname: faker.name.firstName(),
       lastName: faker.name.lastName(),
       about: faker.lorem.text(),
-      email: 'morhpkiehny@personalcok.gq'
+      email: faker.internet.email().toLowerCase()
     }
     console.log({ userToUpdate: user });
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}`)
+      .put(`${URI_PREFIX}/users/${body.id}`)
       .send({ user });
     console.log(result.body);
     expect(result.status).to.be.equal(200);
@@ -408,7 +408,7 @@ describe.only('update user', () => {
     }
     console.log({ userToUpdate: user });
     const result = await chai.request(app)
-      .put(`${URI_PREFIX}/user/${body.id}123`)
+      .put(`${URI_PREFIX}/users/${body.id}123`)
       .send({ user });
     console.log(result.body);
     expect(result.status).to.be.equal(400);
@@ -419,25 +419,26 @@ describe.only('update user', () => {
 });
 
 describe('find User', () => {
-  it('not found user', async () => {
+  it('invalid id params', async () => {
     const result = await chai.request(app)
-      .get(`${URI_PREFIX}/user/${123456789}`);
+      .get(`${URI_PREFIX}/users/${123456789}dfdfdsdfsd`);
     console.log(result.body);
-    expect(result.body.message).to.be.equal('User not found');
+    expect(result.headers['x-error']).to.be.equal('invalid.id.params');
+    expect(result.status).to.be.equal(400);
+  });
+  it('not found user', async () => {
+    const { id } = await addUser();
+    await User.delete({ _id: id });
+    const result = await chai.request(app)
+      .get(`${URI_PREFIX}/users/${id}`);
+    console.log(result.body);
+    expect(result.headers['x-error']).to.be.equal('user.not.found');
     expect(result.status).to.be.equal(404);
   });
   it('find user with username', async () => {
-    const { username } = await addUser();
+    const { username, id } = await addUser();
     const result = await chai.request(app)
-      .get(`${URI_PREFIX}/user/${username}`);
-    console.log(result.body);
-    expect(result.body.user.username).to.be.equal(username);
-    expect(result.status).to.be.equal(200);
-  })
-  it('find user with id', async () => {
-    const { id, username } = await addUser();
-    const result = await chai.request(app)
-      .get(`${URI_PREFIX}/user/${id}`);
+      .get(`${URI_PREFIX}/users/${id}`);
     console.log(result.body);
     expect(result.body.user.username).to.be.equal(username);
     expect(result.status).to.be.equal(200);
@@ -445,37 +446,37 @@ describe('find User', () => {
 });
 
 describe('delete User', () => {
-  it('not found user', async () => {
+  it('not valid id', async () => {
     const result = await chai.request(app)
-      .delete(`${URI_PREFIX}/user/${1234567}`);
+      .delete(`${URI_PREFIX}/users/${1234567}`);
     console.log(result.body);
-    expect(result.body.message).to.be.equal('User not found');
+    expect(result.headers['x-error']).to.be.equal('invalid.id.params');
+    expect(result.status).to.be.equal(400);
+  });
+  it('not found user', async () => {
+    const { id } = await addUser();
+    await User.delete(id);
+    const result = await chai.request(app)
+      .delete(`${URI_PREFIX}/users/${id}`);
+    console.log(result.body);
+    expect(result.headers['x-error']).to.be.equal('user.not.found');
     expect(result.status).to.be.equal(404);
   });
-  it('delete user with username', async () => {
-    const { username } = await models.User.findById(await addUser());
-    const users = await models.User.findAll();
+  it('delete user', async () => {
+    const { id } = await addUser();
+    const users = await User.getAll();
     const size = users.length;
+    console.log(users.length);
     const result = await chai.request(app)
-      .delete(`${URI_PREFIX}/user/${username}`);
-    const usersAfterDelete = await models.User.findAll();
+      .delete(`${URI_PREFIX}/users/${id}`);
+    const usersAfterDelete = await User.getAll();
+    console.log(usersAfterDelete.length);
     const sizeAfterDelete = usersAfterDelete.length;
     console.log(result.body);
     expect(size - 1).to.be.equal(sizeAfterDelete);
-    expect(result.status).to.be.equal(200);
+    expect(result.status).to.be.equal(204);
+    expect(result.headers['x-code']).to.be.equal('success.delete.user');
   });
-  it('delete user with id', async () => {
-    const id = await addUser();
-    const users = await models.User.findAll();
-    const size = users.length;
-    const result = await chai.request(app)
-      .delete(`${URI_PREFIX}/user/${id}`);
-    const usersAfterDelete = await models.User.findAll();
-    const sizeAfterDelete = usersAfterDelete.length;
-    console.log(result.body);
-    expect(size - 1).to.be.equal(sizeAfterDelete);
-    expect(result.status).to.be.equal(200);
-  })
 });
 
 after(async () => {

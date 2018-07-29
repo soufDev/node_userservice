@@ -1,6 +1,11 @@
 import express from 'express';
 import userController from '../controllers/userController';
-import { emailValidator, usernameValidator } from '../validator/uniqueValidator';
+import {
+  emailValidator,
+  existUserValidation,
+  idObjectValidator,
+  usernameValidator
+} from '../validator/uniqueValidator';
 
 const router = express.Router();
 
@@ -12,16 +17,23 @@ router.post('/users', usernameValidator, emailValidator, (request, response) => 
   userController.add(request, response);
 });
 
-router.put('/user/:id', usernameValidator, emailValidator, (request, response) => {
-  userController.update(request, response);
+router.put(
+  '/users/:id',
+  idObjectValidator,
+  existUserValidation,
+  usernameValidator,
+  emailValidator,
+  (request, response) => {
+    userController.update(request, response);
+  },
+);
+
+router.get('/users/:id', idObjectValidator, existUserValidation, (request, response) => {
+  userController.findOne(request, response);
 });
 
-router.get('/user/:id', (request, response) => {
-  userController.getOne(request, response);
-});
-
-router.delete('/user/:id', (request, response) => {
-  userController.deleteOne(request, response);
+router.delete('/users/:id', idObjectValidator, existUserValidation, (request, response) => {
+  userController.delete(request, response);
 });
 
 export default router;
