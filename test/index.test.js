@@ -3,15 +3,11 @@ import chaiHttp from 'chai-http';
 import Promise from 'bluebird';
 import env from 'dotenv';
 import app from '../app';
-import faker from "faker";
 
-before(() => {
-});
+before(() => {});
 
 chai.use(chaiHttp);
-const {
-  expect
-} = chai;
+const { expect } = chai;
 const request = chai.request(app);
 Promise.promisifyAll(request);
 

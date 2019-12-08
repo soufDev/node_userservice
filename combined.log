@@ -3624,3 +3624,21 @@
 {"message":{"jsonError":{"errors":{"email":{"message":"email.invalid","name":"ValidatorError","properties":{"message":"email.invalid","type":"user defined","path":"email","value":"azaz"},"kind":"user defined","path":"email","value":"azaz","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.invalid","name":"ValidationError"}},"level":"error"}
 {"message":{"jsonError":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":null},"kind":"required","path":"email","value":null,"$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
 {"message":{"jsonError":{"errors":{"email":{"message":"email.required","name":"ValidatorError","properties":{"message":"email.required","type":"required","path":"email","value":""},"kind":"required","path":"email","value":"","$isValidatorError":true}},"_message":"User validation failed","message":"User validation failed: email: email.required","name":"ValidationError"}},"level":"error"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"failed to connect to server [database:27017] on first connect [MongoNetworkError: connection timed out\n    at connectionFailureError (/Users/soufianeaitakkache/my-projects/node_userservice/node_modules/mongodb/lib/core/connection/connect.js:377:14)\n    at Socket.<anonymous> (/Users/soufianeaitakkache/my-projects/node_userservice/node_modules/mongodb/lib/core/connection/connect.js:287:16)\n    at Object.onceWrapper (events.js:299:28)\n    at Socket.emit (events.js:210:5)\n    at Socket.EventEmitter.emit (domain.js:476:20)\n    at Socket._onTimeout (net.js:468:8)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7) {\n  name: 'MongoNetworkError',\n  [Symbol(mongoErrorContextSymbol)]: {}\n}]","level":"error"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}
+{"message":"mongodb://database:27017/user-database","level":"info"}

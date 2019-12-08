@@ -6,7 +6,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, 'username.required'],
     minlength: [6, 'username.short.length'],
-    unique: true,
+    unique: true
   },
   lastname: {
     type: String
@@ -17,7 +17,7 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: [true, 'email.required'],
-    validate: [email => isEmail(email), 'email.invalid'],
+    validate: [(email) => isEmail(email), 'email.invalid'],
     unique: true
   },
   password: {
@@ -39,11 +39,11 @@ userSchema.set('toJSON', {
   virtuals: true,
   versionKey: false,
   getters: true,
-  tranform: (doc, ret, options) => {
+  tranform: (doc, ret) => {
     ret.id = ret._id;
     delete ret._id;
     delete ret.__v;
   }
-})
+});
 
 export default userSchema;

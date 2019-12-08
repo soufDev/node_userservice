@@ -1,9 +1,7 @@
 import http from 'http';
-import dotenv from 'dotenv';
 import app from '../app';
 import Config from '../core/config/config.dev';
 
-dotenv.load();
 // retreive the Server Port
 const { serverPort } = Config;
 
